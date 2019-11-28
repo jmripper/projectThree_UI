@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+    outline: 1px solid blue;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+  }  
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin: 3em;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+}
+
+#container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-auto-rows: 0;
+}
+
+.image-grid-items {
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+/*Mobile Styles*/
