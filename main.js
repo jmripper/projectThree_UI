@@ -64,13 +64,15 @@ var nasaObjectList = [
 ]
 
 console.log(nasaObjectList);
-//const modal = document.getElementById("modalItem");
-let imageList = document.querySelectorAll(".imagelist")
+const modal = document.getElementById("modalItem");
+const imageList = document.querySelectorAll(".image")
 console.log(imageList)
 
 imageList.forEach((imageItem, i) => {
     let nasaData = nasaObjectList[i]
-    let imageTitle = nasaData[0].title
-    //console.log(imageTitle)
+    let imageTitle = nasaData.title
+    let imageExplation = nasaData.explanation
+    console.log(imageTitle)
+    console.log(imageExplation)
     
 })
