@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
 }  
 
 body {
@@ -23,20 +24,27 @@ h2 {
     margin: 0;
 }
 
+p {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0 0 1.6em;
+}
+
 #container {
     padding: 0;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
-    max-width: 960px;
+    justify-content: space-evenly;
+    max-width: 1080px;
 }
 
 .image-list {
     width: 100%;
     max-width: 320px;
     height: 300px;
-    padding: 10px;
+    padding: 0;
     margin: 0;
     cursor: pointer;
     transition: 0.3s;
@@ -46,7 +54,7 @@ h2 {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 200px;
     left: 0;
     top: 0;
     width: 100%;
@@ -59,21 +67,28 @@ h2 {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 100%;
+    max-width: 800px;
     background-color:#ffffff;
     position:relative;
     padding:1em;
     outline:0;
 }
 
+#modal-title {
+    font-size: 2em;
+    font-weight: 500;
+    text-decoration: underline;
+    padding: 0;
+}
+
 #caption {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    height: 150px;
+    width: 90%;
+    max-width: 750px;
+    text-align: left;
+    height: auto;
 }
 
 .close {
@@ -81,7 +96,7 @@ h2 {
     top: 15px;
     right: 35px;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     transition: 0.3s;
     border: none;
@@ -95,6 +110,15 @@ h2 {
     white-space:nowrap
 }
 
+.image {
+    padding: 10px;
+}
 
+.close:hover,
+.close:focus {
+  color: rgb(85, 176, 212);
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /*Mobile Styles*/

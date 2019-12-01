@@ -63,16 +63,41 @@ var nasaObjectList = [
     }
 ]
 
-console.log(nasaObjectList);
+//console.log(nasaObjectList);
 const modal = document.getElementById("modalItem");
 const imageList = document.querySelectorAll(".image")
-console.log(imageList)
+const close = document.getElementsByClassName("close")[0];
+const titleText = document.querySelector("h3");
+const explanationText = document.querySelector("p")
+
+//console.log(imageList)
+//console.log(modal)
 
 imageList.forEach((imageItem, i) => {
     let nasaData = nasaObjectList[i]
     let imageTitle = nasaData.title
-    let imageExplation = nasaData.explanation
+    let imageExplanation = nasaData.explanation
+
+    imageItem.addEventListener("click", evt => {
+        console.log("image was clicked")
+        modal.style.display = "block";
+        titleText.innerHTML = imageTitle
+        explanationText.innerHTML = imageExplanation
+
+        
+    } )
+
+    close.addEventListener("click", evt => {
+        modal.style.display = "none";
+      })
     console.log(imageTitle)
-    console.log(imageExplation)
+    console.log(imageExplanation)
+    console.log(imageItem)
+
+    //let imageClick = document.querySelectorAll(".image-list")
+    //imageClick.addEventListener("click", evt => {
+        //console.log("image clicked")
+    //})
+
     
 })
